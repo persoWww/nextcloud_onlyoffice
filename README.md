@@ -2,7 +2,7 @@
 
 **features a apporter**
 
- - [ ] persistence directory
+ - [X] persistence directory
  - [ ] https sur Nextcloud
  - [ ] SGBD correct
 
