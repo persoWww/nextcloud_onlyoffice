@@ -1,3 +1,11 @@
+# nextcloud_onlyoffice
+
+**features a apporter**
+
+ - [ ] persistence directory
+ - [ ] https sur Nextcloud
+ - [ ] SGBD correct
+
 ## Document Server and Nextcloud Docker installation
 
 Document Server (distributed as ONLYOFFICE Docs starting from v.6.0) and Nextcloud Docker installation will install the preconfigured version of [ONLYOFFICE Document Server][2] connected to Nextcloud to your server running them in Docker containers.
