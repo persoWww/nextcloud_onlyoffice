@@ -8,7 +8,8 @@ services:
       - '80'
       - '9000'
     volumes:
-      - app_data:/var/www/html
+#      - app_data:/var/www/html
+       - ./volumes/nn:/var/www/html
   onlyoffice-document-server:
     container_name: onlyoffice-document-server
     image: onlyoffice/documentserver:latest
@@ -19,8 +20,10 @@ services:
       - '80'
       - '443'
     volumes:
-      - document_data:/var/www/onlyoffice/Data
-      - document_log:/var/log/onlyoffice
+#      - document_data:/var/www/onlyoffice/Data
+       - ./volumes/documentserver/data:/var/www/onlyoffice/Data
+#      - document_log:/var/log/onlyoffice
+       - ./volumes/documentserver/logs:/var/log/onlyoffice
   nginx:
     container_name: nginx-server
     image: nginx
@@ -30,9 +33,10 @@ services:
       - 443:443
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
-      - app_data:/var/www/html
-volumes:
-  document_data:
-  document_log:
-  app_data:
-  mysql_data:
+#      - app_data:/var/www/html
+      - ./volumes/nn:/var/www/html
+#volumes:
+#  document_data:
+#  document_log:
+#  app_data:
+#  mysql_data:
