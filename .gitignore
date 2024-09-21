@@ -1,0 +1,5 @@
+volumes/
+nginx_app_data/
+document_log/
+document_data/
+nextcloud_app_data/
